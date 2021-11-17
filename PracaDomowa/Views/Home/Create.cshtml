@@ -1,0 +1,26 @@
+﻿@model PracaDomowa.Models.HomeModel
+@{ ViewData["Title"] = "Home-Create"; }
+
+
+
+<h1 class="display-4">Formularz</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Home" asp-action="Create" method="post">
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="home-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Repeat" class="control-label"></label>
+                <input asp-for="Repeat" class="home-control" />
+                <span asp-validation-for="Repeat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Zapisz" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

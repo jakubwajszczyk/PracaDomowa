@@ -1,0 +1,13 @@
+﻿@model PracaDomowa.Models.HomeModel
+@{ ViewData["Title"] = "Created"; }
+
+
+
+<div class="text-left">
+    <h1 class="display-4">Dane z formularza</h1>
+    @{ for (int i = 1; i <= Model.Repeat; i++)
+        {
+            @Html.DisplayFor(model => model.Name)<br />
+        }
+    }
+</div>
